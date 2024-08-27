@@ -1,0 +1,42 @@
+<h1>Countries info</h1>
+<div class="input-field">
+  <input
+    type="text"
+    placeholder="Search for a country..."
+    [(ngModel)]="searchQuery"
+    (input)="searchCountries()"
+  />
+</div>
+<div class="search-container">
+  <div *ngIf="countries.length > 0" class="search-results">
+    <ul>
+      <li *ngFor="let country of countries">
+        <span (click)="addCountryToSelection(country)">
+          {{ country.name }}
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="selected-countries">
+  <h3>Selected Countries</h3>
+  <ul>
+    <li *ngFor="let country of selectedCountries">
+      <span (click)="navigateToCountry(country.countryCode)">
+        {{ country.name }}
+      </span>
+    </li>
+  </ul>
+</div>
+
+<div class="random-countries-block">
+  <h3>Next Holiday in...</h3>
+  <div class="random-countries">
+    <app-random-country
+      *ngFor="let country of randomCountries"
+      [country]="country"
+      (click)="navigateToCountry(country.countryCode)"
+    ></app-random-country>
+  </div>
+</div>

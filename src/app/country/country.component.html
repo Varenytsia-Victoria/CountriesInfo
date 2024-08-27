@@ -1,0 +1,32 @@
+<div *ngIf="countryCode">
+  <button class="to-home-btn" (click)="navigateToHome()">< Home</button>
+  <h1>Holidays in {{ countryName }} for {{ currentYear }}</h1>
+
+  <div class="pagination">
+    <button
+      *ngFor="let year of years"
+      [ngClass]="{ active: year === currentYear }"
+      (click)="changeYear(year)"
+    >
+      {{ year }}
+    </button>
+  </div>
+
+  <div class="holidays-list" *ngIf="holidays.length > 0">
+    <ul>
+      <li *ngFor="let holiday of holidays">
+        <div class="list-item">
+          <span class="holiday-name"
+            ><strong>{{ holiday.name }}</strong> -
+            {{ holiday.date | date }}</span
+          >
+          <span class="holiday-type">Type: {{ holiday.types }}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="holidays.length === 0">
+    <p>No holidays available for the selected year.</p>
+  </div>
+</div>

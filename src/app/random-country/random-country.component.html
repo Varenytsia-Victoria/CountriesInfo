@@ -1,0 +1,11 @@
+<div class="country-container" *ngIf="country">
+  <h4>{{ country.name }}</h4>
+  <div class="country-card">
+    <div class="holiday-name">
+      {{ nextHoliday?.name || "No upcoming holidays" }}
+    </div>
+    <div class="country-holiday" *ngIf="nextHoliday?.date">
+      on {{ nextHoliday?.date | date }}
+    </div>
+  </div>
+</div>

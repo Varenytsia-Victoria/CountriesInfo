@@ -1,0 +1,95 @@
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color: #777bd3;
+  padding: 100px 0 20px 0;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.holiday-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.pagination button {
+  background-color: #f9fafb;
+  color: #4e4e4f;
+  border: none;
+  border-radius: 50%;
+  padding: 18px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #777bd3;
+  color: white;
+}
+
+.pagination button.active {
+  background-color: #777bd3;
+  font-weight: bold;
+  color: white;
+}
+
+.to-home-btn {
+  background-color: #777bd3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 25px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.holidays-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+
+.holiday-name {
+  font-size: 18px;
+  text-align: left;
+  overflow-wrap: break-word;
+  color: #525252;
+}
+
+.holiday-type {
+  font-size: 15px;
+  text-align: right;
+  color: #777;
+}
+
+.holidays-list {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
