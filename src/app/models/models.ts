@@ -10,4 +10,5 @@ export interface Country {
   name: string;
   countryCode: string;
   nextHoliday?: Holiday;
+  commonName?: string;
 }

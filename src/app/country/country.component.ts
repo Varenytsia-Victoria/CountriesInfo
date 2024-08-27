@@ -36,7 +36,7 @@ export class CountryComponent implements OnInit {
     });
   }
 
-  initializeYears() {
+  initializeYears(): void {
     this.years = [];
     for (let i = 2020; i <= 2030; i++) {
       this.years.push(i);

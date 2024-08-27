@@ -47,7 +47,7 @@ export class CountryService {
     );
   }
 
-  getCountryInfo(countryCode: string): Observable<any> {
+  getCountryInfo(countryCode: string): Observable<Country> {
     return this.http.get<Country>(`${this.baseUrl}/CountryInfo/${countryCode}`);
   }
 
