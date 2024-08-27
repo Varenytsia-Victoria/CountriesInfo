@@ -1,0 +1,43 @@
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #555;
+  cursor: pointer;
+}
+
+.country-container {
+  text-align: center;
+}
+
+.country-card {
+  width: 250px;
+  min-height: 100px;
+  margin: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.holiday-name,
+h4 {
+  font-weight: 500;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+  font-size: 17px;
+  max-width: 90%;
+}
+
+h4 {
+  font-size: 25px;
+  color: #474747;
+}
+
+.country-holiday {
+  font-size: 0.9em;
+  color: #555;
+}
